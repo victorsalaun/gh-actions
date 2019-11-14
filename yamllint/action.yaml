@@ -1,0 +1,6 @@
+name: gh-actions
+description: Yamllint GH Action
+author: 'Victor SALAUN'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
