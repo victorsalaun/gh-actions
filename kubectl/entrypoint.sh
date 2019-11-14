@@ -3,4 +3,4 @@
 set -e
 set -o pipefail
 
-kubectl "$INPUT_COMMAND"
+kubectl "$INPUT_SUBCOMMAND"
