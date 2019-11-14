@@ -1,0 +1,10 @@
+name: gh-actions
+description: Various actions
+author: 'Victor SALAUN'
+inputs:
+  command:
+    description: 'Command to launch'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
