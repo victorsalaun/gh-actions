@@ -3,4 +3,4 @@
 set -e
 set -o pipefail
 
-kubectl "$1"
+sh -c "kubectl $1"
