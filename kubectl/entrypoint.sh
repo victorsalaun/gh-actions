@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 
-kubectl $1
+set -e
+set -o pipefail
+
+kubectl "$1"
