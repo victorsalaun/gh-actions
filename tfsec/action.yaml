@@ -1,0 +1,6 @@
+name: gh-actions
+description: tfsec GH Action
+author: 'Victor SALAUN'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
