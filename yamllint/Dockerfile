@@ -9,4 +9,6 @@ RUN yamllint --version
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["yamllint"]
+
+CMD ["--version"]
