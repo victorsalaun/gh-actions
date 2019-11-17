@@ -7,8 +7,6 @@ RUN wget https://github.com/liamg/tfsec/releases/download/v${TFSEC}/tfsec-linux-
   -O /usr/local/bin/tfsec \
   && chmod +x /usr/local/bin/tfsec
 
-RUN ls /usr/local/bin
-RUN ls /usr/local/bin/tfsec
-COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["tfsec"]
 
-ENTRYPOINT ["/entrypoint.sh"]
+CMD ["."]
