@@ -2,28 +2,22 @@
 
 ## Usage
 
-```yaml
-name: 'GitHub Actions'
+### tfsec
+
+`````yaml
+name: terraform
 on:
   - pull_request
   - push
 jobs:
-  samples:
-    name: 'Actions'
+  tfsec:
+    name: terraform tfsec
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout'
-        uses: actions/checkout@master
-      - name: 'Kubectl command'
-        uses: victorsalaun/gh-actions@master
-        with:
-          command: 'kubectl version'
-      - name: 'Helm command'
-        uses: victorsalaun/gh-actions@master
-        with:
-          command: 'helm version'
-      - name: 'Yamllint command'
-        uses: victorsalaun/gh-actions@master
-        with:
-          command: 'yamllint --version'
-```
+    - name: 'Checkout'
+      uses: actions/checkout@master
+    - name: 'tfsec'
+      uses: victorsalaun/gh-actions/tfsec@master
+      with:
+        args: terraform/layers
+`````
